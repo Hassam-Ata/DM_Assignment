@@ -1,0 +1,23 @@
+{
+  "hourly_records": 8760,
+  "source_sha256": "889e282c228a1e7c80969df375497a40f24ef08eb9690318ffb97928526bd9c8",
+  "PV_kWh": 6263310.0,
+  "load_kWh": 22024941.0,
+  "surplus_kWh": 1012146.0,
+  "deficit_kWh": 16773777.0,
+  "surplus_hours": 770,
+  "self_consumed_kWh": 5251164.0,
+  "PV_positive_hours": 4714,
+  "peak_threshold_kW": 5427.199999999997,
+  "peak_hours": 438,
+  "peak_timestamp": "2023-02-01 12:00:00",
+  "peak_load_kW": 11866.0,
+  "mean_price_EUR_MWh": 88.27048173515982,
+  "load_weighted_price_EUR_MWh": 86.9039018551741,
+  "zero_load_hours": 4,
+  "zero_price_hours": 70,
+  "midday_PV_zero_hours": 4,
+  "gross_load_cost_EUR": 1914053.3110300002,
+  "deficit_cost_EUR": 1518662.93531,
+  "source_sha256_after": "889e282c228a1e7c80969df375497a40f24ef08eb9690318ffb97928526bd9c8"
+}

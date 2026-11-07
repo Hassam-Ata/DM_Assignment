@@ -1,0 +1,35 @@
+{
+  "source": "data/Dataset.xlsx",
+  "sheet": "2023 data",
+  "raw_shape": [
+    8765,
+    31
+  ],
+  "hourly_shape": [
+    8760,
+    6
+  ],
+  "date_min": "2023-01-01 00:00:00",
+  "date_max": "2023-12-31 23:00:00",
+  "fully_blank_rows": 4,
+  "nondate_nonempty_rows": 1,
+  "unnamed_nonempty_cells": 20,
+  "fully_empty_columns": 20,
+  "duplicate_rows_excess": 0,
+  "duplicate_timestamps_excess": 0,
+  "missing_hours": 0,
+  "outside_2023": 0,
+  "non_increasing_source_intervals": 0,
+  "non_hour_aligned": 0,
+  "normalization_base_kW": 11866.0,
+  "normalization_max_abs_error": 1.1102230246251565e-16,
+  "normalization_mismatches": 0,
+  "price_max_abs_error": 0.0,
+  "price_mismatches": 0,
+  "absolute_tolerance": 1e-10,
+  "source_sha256_before": "889e282c228a1e7c80969df375497a40f24ef08eb9690318ffb97928526bd9c8",
+  "python": "3.12.10",
+  "pandas": "2.2.2",
+  "numpy": "1.26.4",
+  "source_sha256_after": "889e282c228a1e7c80969df375497a40f24ef08eb9690318ffb97928526bd9c8"
+}

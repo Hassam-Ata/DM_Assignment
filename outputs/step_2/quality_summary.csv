@@ -1,0 +1,6 @@
+column,missing,non_numeric,non_finite,zero,negative,IQR_outlier,IQR_lower,IQR_upper
+PV generation (kW),0,0,0,4046,0,1011,-1353.0,2255.0
+Consumption (kW),0,0,0,4,0,1238,762.5,3638.5
+Consumption (pu),0,0,0,4,0,1238,0.06425922804651951,0.30663239507837514
+Energy price (EUR/MWh),0,0,0,70,0,9,-9.427500000000009,191.39249999999998
+Energy price (EUR/kWh),0,0,0,70,0,9,-0.009427500000000005,0.1913925

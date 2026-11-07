@@ -1,0 +1,3 @@
+Surplus,PV_count,PV_mean,PV_median,Load_count,Load_mean,Load_median,Price_count,Price_mean,Price_median,Surplus_count,Surplus_mean,Surplus_median,Deficit_count,Deficit_mean,Deficit_median
+False,7990,431.02816020025034,0.0,7990,2530.3744680851064,1986.0,7990,90.40418523153942,95.05,7990,0.0,0.0,7990,2099.3463078848563,1888.5
+True,770,3661.551948051948,3737.0,770,2347.0766233766235,2066.5,770,66.12984415584415,75.125,770,1314.4753246753246,1085.5,770,0.0,0.0

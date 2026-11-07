@@ -1,0 +1,32 @@
+column,raw_dtype,nonmissing_raw,missing_raw,role
+Date,object,8761,4,timestamp
+PV generation (kW),float64,8760,5,measurement
+Consumption (kW),float64,8760,5,measurement
+Consumption (pu),float64,8760,5,measurement
+Energy price (EUR/MWh),float64,8760,5,measurement
+Energy price (EUR/kWh),float64,8760,5,measurement
+Unnamed: 6,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 7,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 8,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 9,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 10,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 11,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 12,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 13,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 14,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 15,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 16,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 17,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 18,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 19,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 20,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 21,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 22,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 23,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 24,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 25,float64,0,8765,unlabelled auxiliary / empty
+Unnamed: 26,float64,5,8760,unlabelled auxiliary / empty
+Unnamed: 27,float64,5,8760,unlabelled auxiliary / empty
+Unnamed: 28,float64,4,8761,unlabelled auxiliary / empty
+Unnamed: 29,float64,4,8761,unlabelled auxiliary / empty
+Unnamed: 30,float64,2,8763,unlabelled auxiliary / empty
