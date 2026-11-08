@@ -23,7 +23,7 @@ email@cloud.neduet.edu.pk}
 \maketitle
 
 \begin{abstract}
-This paper presents a comprehensive data mining analysis of photovoltaic (PV) generation, load demand, and electricity price patterns from a full year of hourly microgrid data (8,760 observations from 2023). We conduct exploratory data analysis to uncover seasonal, daily, and hourly patterns, quantify correlations across multiple time scales, and evaluate the relationship between solar surplus, grid deficit, and market prices. Key findings include: (1) strong seasonal variation with summer PV generation averaging 1,184 kW versus 307 kW in winter, while winter load peaks at 2,919 kW versus 2,161 kW in summer; (2) correlation reversals between hourly and daily aggregations (PV–load Pearson shifts from +0.245 hourly to −0.292 daily); (3) only 8.8\% of hours exhibit solar surplus, with coincident self-consumption meeting just 23.8\% of annual demand; (4) peak demand hours (top 5\%) show marginally higher prices (92.1 vs 88.1 EUR/MWh). These patterns inform scenario reduction for microgrid planning and provide a foundation for forecasting model selection. The analysis uses only descriptive statistics and correlation analysis without imputation or model training, preserving the integrity of the original measurements.
+This paper presents a comprehensive data mining analysis of photovoltaic (PV) generation, load demand, and electricity price patterns from a full year of hourly microgrid data (8,760 observations from 2023). We conduct exploratory data analysis to uncover seasonal, daily, and hourly patterns, quantify correlations across multiple time scales, and evaluate the relationship between solar surplus, grid deficit, and market prices. Key findings include: (1) strong seasonal variation with summer PV generation averaging 1,184 kW versus 307 kW in winter, while winter load peaks at 2,919 kW versus 2,161 kW in summer; (2) correlation reversals between hourly and daily aggregations (PV–load Pearson shifts from +0.245 hourly to −0.292 daily); (3) only 8.8\% of hours exhibit solar surplus, with coincident self-consumption meeting just 23.8\% of annual demand; (4) peak demand hours (top 5\%) show lower prices (78.8 vs 88.8 EUR/MWh). These patterns inform scenario reduction for microgrid planning and provide a foundation for forecasting model selection. The analysis uses only descriptive statistics and correlation analysis without imputation or model training, preserving the integrity of the original measurements.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -94,7 +94,7 @@ Energy price & EUR/kWh & Price converted to EUR/kWh (verified: /1000) \\
 \end{center}
 \end{table}
 
-The dataset contains 8,760 consecutive hourly observations with no missing timestamps, no duplicate timestamps, and no missing values in the core columns. Four blank rows and one URL footer in the source sheet were excluded. Twenty fully empty columns and five unnamed auxiliary columns (20 non-empty cells of unknown meaning) were documented separately and excluded from analysis. The SHA-256 hash of the source file remained unchanged throughout processing (889e282c228a1e7c80969df375497a40f24ef08eb9690318ffb97928526bd9c8), ensuring reproducibility.ut analysis (\texttt{889e282c228a1e7c80969df375497a40f24ef08eb9690318ffb97928526bd9c8}), confirming no modifications to the original data.
+The dataset contains 8,760 consecutive hourly observations with no missing timestamps, no duplicate timestamps, and no missing values in the core columns. Four blank rows and one URL footer in the source sheet were excluded. Twenty fully empty columns and five unnamed auxiliary columns (20 non-empty cells of unknown meaning) were documented separately and excluded from analysis. The SHA-256 hash of the source file remained unchanged throughout processing (889e282c228a1e7c80969df375497a40f24ef08eb9690318ffb97928526bd9c8), ensuring reproducibility (\texttt{889e282c228a1e7c80969df375497a40f24ef08eb9690318ffb97928526bd9c8}), confirming no modifications to the original data.
 
 \subsection{Preprocessing and Feature Engineering}
 \label{sec:preprocessing}
@@ -257,10 +257,10 @@ Annual totals: PV generation 6,263,310 kWh; Load demand 22,024,941 kWh. PV meets
     \item \textbf{Surplus hours}: 770 hours (8.8\% of year) with PV $>$ Load, totaling 1,012,146 kWh surplus.
     \item \textbf{Coincident self-consumption}: 5,251,164 kWh (23.8\% of demand) consumed in the same hour as generation.
     \item \textbf{Grid deficit}: 16,773,777 kWh (76.2\% of demand) must be imported.
-    \item \textbf{Peak demand}: Maximum 11,866 kW on 2023-02-01 12:00 (PV = 907 kW, Price = 90 EUR/MWh).
-    \item \textbf{Peak-hour prices}: Mean price during top 5\% load hours (438 hours) is 92.1 EUR/MWh vs. 88.1 EUR/MWh otherwise—a modest premium.
-    \item \textbf{Deficit–Price correlation}: Pearson +0.113 (hourly), indicating higher deficit mildly associates with higher prices.
-    \item \textbf{Surplus–Price correlation}: Pearson $-$0.187 (hourly), confirming lower prices during solar surplus.
+    \item \textbf{Peak demand}: Maximum 11,866 kW on 2023-02-01 12:00 (PV = 1,772 kW, Price = 107.98 EUR/MWh).
+    \item \textbf{Peak-hour prices}: Mean price during top 5\% load hours (438 hours) is 78.8 EUR/MWh vs. 88.8 EUR/MWh otherwise—a modest discount during peak demand.
+    \item \textbf{Deficit–Price correlation}: Pearson +0.083 (hourly), indicating higher deficit mildly associates with higher prices.
+    \item \textbf{Surplus–Price correlation}: Pearson $-$0.165 (hourly), confirming lower prices during solar surplus.
 \end{itemize}
 
 Load-weighted average price (86.9 EUR/MWh) is below time-average (88.3 EUR/MWh), reflecting lower prices during high-demand hours. Illustrative energy-only cost: 1,914,053 EUR (gross load) vs. 1,518,663 EUR (deficit only)—excluding tariffs, taxes, network fees, and export revenue.
@@ -300,7 +300,7 @@ Figure~\ref{fig:energy_balance_price} illustrates these relationships.
 
 \begin{itemize}
     \item \textbf{Zero load}: 4 hours (2023-08-07 11:00–14:00), coincident with zero PV. Prices = 90 EUR/MWh throughout. Suggests shared outage or recording issue; not removed.
-    \item \textbf{Zero price}: 70 hours in multiple runs; longest run 12 hours. Unit conversion verified; market validity unconfirmed.
+    \item \textbf{Zero price}: 70 hours in multiple runs; longest run 16 hours. Unit conversion verified; market validity unconfirmed.
     \item \textbf{Midday PV zeros}: 4 hours (same block as zero load), not additional events.
     \item \textbf{No missing timestamps, duplicates, or non-numeric values} in core hourly table.
 \end{itemize}
@@ -316,7 +316,7 @@ This paper presented a comprehensive data mining analysis of a full-year hourly 
     \item \textbf{Strong seasonal asymmetry}: Summer PV (1,184 kW mean) is 3.9$\times$ winter (307 kW), while winter load (2,919 kW) exceeds summer (2,161 kW) by 35\%. Summer prices are highest (95.8 EUR/MWh) despite high PV.
     \item \textbf{Correlation reversals under aggregation}: PV–Load shifts from +0.245 (hourly) to $-$0.292 (daily); PV–Price from $-$0.225 to +0.128. Modeling at a single time scale risks misleading conclusions.
     \item \textbf{Limited coincident solar utilization}: Only 23.8\% of demand is met by same-hour PV; 76.2\% requires grid import. Surplus occurs in just 8.8\% of hours.
-    \item \textbf{Modest peak-price premium}: Top 5\% load hours average only 4 EUR/MWh above non-peak hours.
+    \item \textbf{Modest peak-price discount}: Top 5\% load hours average about 10 EUR/MWh below non-peak hours.
     \item \textbf{Data quality}: Four-hour coincident zero-load/zero-PV block and 70 zero-price hours flagged for source verification; no observations removed.
 \end{enumerate}
 
